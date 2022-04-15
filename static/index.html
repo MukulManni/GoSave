@@ -5,17 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+
     <title>Text Saver</title>
 </head>
 
-<body>
+<body bgcolor="black">
     <center>
-        <h1>Text Saver</h1>
+        <h1 style="color: white;font-family: 'Open Sans', sans-serif;">Go Text Saver</h1>
     </center>
 
     <form action="/post" method="post">
-        <textarea name="data" style="height: 500px; width: 100%;">{{ .text}}</textarea>
-        <div><input type="submit" value="Submit"></div>
+        <textarea name="data" style="height: 500px; width: 100%; background-color: #444;font-size: large;color: white;">{{ .text}}</textarea>
+        <center><div style="margin-top: 5px;"><input style="height: 50px;width: 100%;font-weight: bold;font-size: large; background-color: grey;" type="submit" value="Paste"></div></center>
     </form>
 </body>
 

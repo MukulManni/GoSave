@@ -49,7 +49,8 @@ func getMsg(c *gin.Context) {
 			http.StatusOK,
 			"index.html",
 			gin.H{
-				"text": data.content,
+				"text":    data.content,
+				"address": "https://gosave.herokuapp.com/" + sid,
 			},
 		)
 	} else {

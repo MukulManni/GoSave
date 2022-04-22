@@ -21,7 +21,25 @@
     <form action="/post" method="post">
         <textarea name="data" style="height: 500px; width: 100%; background-color: #444;font-size: large;color: white;">{{ .text}}</textarea>
         <center><div style="margin-top: 5px;"><input style="height: 50px;width: 100%;font-weight: bold;font-size: large; background-color: grey;" type="submit" value="Paste"></div></center>
+        <div id="link" style="font-size: large;font-family: 'Open Sans', sans-serif;color: white;">Link: {{ .address}}</div>
     </form>
 </body>
+
+<script>
+    function copy() {
+      /* Get the text field */
+      var copyText = document.getElementById("myInput");
+    
+      /* Select the text field */
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); /* For mobile devices */
+    
+      /* Copy the text inside the text field */
+      navigator.clipboard.writeText(copyText.value);
+      
+      /* Alert the copied text */
+      alert("Copied the text: " + copyText.value);
+    }
+    </script>
 
 </html>
